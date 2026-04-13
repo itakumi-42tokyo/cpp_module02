@@ -17,3 +17,16 @@ Fixed& Fixed::operator=(Fixed a) {
 void swap(Fixed& first, Fixed& second) {
 	std::swap(first._fixedPointNumber, second._fixedPointNumber);
 }
+
+Fixed::~Fixed(void) {
+
+}
+
+int getRawBits(void) {
+
+	return ;
+}
+
+void setRawBits(int const raw) {
+
+}

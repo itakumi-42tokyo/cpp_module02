@@ -3,7 +3,7 @@
 
 int main(void) {
 	Fixed a;
-	Fixed b;
+	Fixed b( a );
 	Fixed c;
 
 	c = b;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Fixed.hpp"
+#include "Fixed.h"
 
 Fixed::Fixed(void) {
 	this->fixedPointNumber_ = 0;

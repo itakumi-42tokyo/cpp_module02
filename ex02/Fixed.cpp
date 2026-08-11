@@ -61,6 +61,7 @@ Fixed Fixed::operator-(const Fixed& a) const {
   return result;
 }
 
+// overflow
 Fixed Fixed::operator*(const Fixed& a) const {
   Fixed result;
   result.setRawBits(fixedPointNumber_ * a.fixedPointNumber_ / (1 << fractionalBits_));

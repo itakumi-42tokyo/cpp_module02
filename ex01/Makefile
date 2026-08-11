@@ -21,10 +21,10 @@ $(NAME): $(OBJS)
 	$(CPP) $(CFLAGS) $(VERSION) -c $< -o $@
 
 clean:
-	rm $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re:
 	$(MAKE) fclean

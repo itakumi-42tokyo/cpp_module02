@@ -1,24 +1,18 @@
 #include <iostream>
 #include "Fixed.h"
 
-Fixed::Fixed(void) {
-	this->fixedPointNumber_ = 0;
+Fixed::Fixed(void) : fixedPointNumber_(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& a) {
+Fixed::Fixed(const Fixed& a) : fixedPointNumber_(a.fixedPointNumber_) {
 	std::cout << "Copy constructor called" << std::endl;
 }
-//*this = a; permanently loop
 
-Fixed& Fixed::operator=(Fixed a) {
+Fixed& Fixed::operator=(const Fixed& a) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->fixedPointNumber_ = a.getRawBits();
 	return (*this);
-}
-
-void swap(Fixed& first, Fixed& second) {
-	std::swap(first.fixedPointNumber_, second.fixedPointNumber_);
 }
 
 Fixed::~Fixed(void) {

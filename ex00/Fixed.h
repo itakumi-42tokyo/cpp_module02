@@ -1,3 +1,7 @@
+#ifndef FIXED_H
+#define FIXED_H
+
+
 class Fixed {
 	private:
 		int fixedPointNumber_;
@@ -6,11 +10,10 @@ class Fixed {
 	public:
 		Fixed();
 		Fixed(const Fixed&);
-		Fixed& operator=(Fixed a);
-		friend void swap(Fixed& first, Fixed& second);
+		Fixed& operator=(const Fixed& a);
 		~Fixed();
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );
-
-
 };
+
+#endif

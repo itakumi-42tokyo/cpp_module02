@@ -64,7 +64,7 @@ Fixed Fixed::operator*(const Fixed& a) const {
 
 Fixed Fixed::operator/(const Fixed& a) const {
   Fixed result;
-  result.setRawBits(fixedPointNumber_ * a.fixedPointNumber_ * (1 << fractionalBits_));
+  result.setRawBits(fixedPointNumber_ * (1 << fractionalBits_) / a.fixedPointNumber_ );
   return result;
 }
 
